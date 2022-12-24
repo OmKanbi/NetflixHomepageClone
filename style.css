@@ -367,7 +367,7 @@ h1 {
 }
 
 .footer-wrapper ul {
-    width: 1000px;
+    grid-template-columns: repeat(4, 1fr);
     padding-left: 0;
 }
 
@@ -411,15 +411,17 @@ h1 {
     background-color: #000;
 }
 
+/*-------------------- Media Queries --------------------*/
+
 @media only screen and (max-width: 1000px) {
 
-    .footer-wrapper,
-    .footer-wrapper ul {
+    .footer-wrapper, .footer-wrapper li a {
         width: auto;
     }
+    .footer-wrapper ul {
+        grid-template-columns: repeat(3,1fr);
+    }
 }
-
-/*-------------------- Media Queries --------------------*/
 
 @media only screen and (max-width: 549px) {
     .hero-content1 p:nth-child(1) {
@@ -524,6 +526,9 @@ h1 {
 
     .section5 {
         padding: 70px 0px;
+    }
+    .footer-wrapper ul {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -642,3 +647,4 @@ h1 {
         font-size: 3.125rem;
     }
 }
+
